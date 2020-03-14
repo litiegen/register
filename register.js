@@ -147,10 +147,10 @@ $(function() {
 	$btn.click(function() {
 		$btn.attr('disabled', 'disabled');
 		timer = window.setInterval(function() {
-			$btn.val('同意 (' + i-- + ' s)');
+			$btn.val('获取验证码 (' + i-- + ' s)');
 			if(i === -1) {
 				window.clearInterval(timer);
-				$btn.val('同意');
+				$btn.val('获取验证码');
 				$btn.removeAttr('disabled');
 			}
 		}, 1000);
