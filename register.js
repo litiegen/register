@@ -96,8 +96,8 @@ function password(data) {
 		result.reason = '不能为空！';
 		return result;
 	}
-	if(!/^[\u0021-\u007E]{8,16}$/.test(data)) {
-		result.reason = '格式不正确,8-16位且不能有空格汉字标点符号';
+	if(!/(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^[^\s\u4e00-\u9fa5]{8,14}$/.test(data)) {
+		result.reason = '格式不正确,8-14位,字母/数字以及标点至少两种且不能有空格中文';
 		return result;
 	}
 	result.isOK = true;
