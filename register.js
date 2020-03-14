@@ -121,7 +121,7 @@ function verification(data) {
 }
 /*** 发送验证码 ***/
 $(function() {
-	var $btn = $('input[type="button"]'),
+	var $btn = $('#btn'),
 	i = 3,
 	timer;
 	$btn.click(function() {
