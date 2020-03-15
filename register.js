@@ -60,7 +60,7 @@ function validate(data) {
 		result.reason = '不能为空！';
 		return result;
 	}
-	if(/^-?(0|[1-9]\d*)(\.\d*)?([eE][+-]?\d+)?$/.test(data)) {
+	if(/^-?([0-9]\d*)(\.\d*)?([eE][+-]?\d+)?$/.test(data)) {
 		result.reason = '仅支持中英文，数字和下划线且不能为纯数字';
 		return result;
 	}
